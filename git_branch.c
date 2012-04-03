@@ -32,8 +32,8 @@ for (int i=CWD_LEN;i>=0 ; i--){
             for (int j=l ;j>=0; j--){
                 if (head_str[j]=='/'){
                     printf("%c[%d;%dm", 0x1B, BRIGHT, GREEN);
-                    for (int k = j ; (k<CWD_LEN-1) && (head_str[k] !='\0') && (head_str[k] !='\n') ; k++){
-                        printf("%c", head_str[k+1]);
+                    for (int k = j+1 ; (k<CWD_LEN-1) && (head_str[k] !='\0') && (head_str[k] !='\n') ; k++){
+                        printf("%c", head_str[k]);
                     }
                     break;
                 }
