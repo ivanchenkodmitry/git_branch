@@ -5,6 +5,7 @@
 
 #define CWD_LEN 1000
 #define BRIGHT 1
+#define DARK 2
 #define RED 31
 #define GREEN 32
 
