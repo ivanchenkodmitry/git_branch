@@ -1,2 +1,11 @@
 Simple and ultrafast current git branch indicator.
 Especially useful when incorporated in comand prompt
+
+================================================================================
+ Installation
+================================================================================
+
+$ make
+$ make install
+
+Edit ~/.bashrc as you like

@@ -19,6 +19,7 @@ char head_str[CWD_LEN];
 char cwd[CWD_LEN];
 getcwd(cwd, CWD_LEN);
 
+/*printf("%c[%d;%dm", 0x1B, BRIGHT, GREEN);*/
 for (int i=CWD_LEN;i>=0 ; i--){
     if (cwd[i]=='/'){
         strcat(cwd, "/.git/HEAD");
@@ -32,7 +33,6 @@ for (int i=CWD_LEN;i>=0 ; i--){
             }
             for (int j=l ;j>=0; j--){
                 if (head_str[j]=='/'){
-/*                    printf("%c[%d;%dm", 0x1B, BRIGHT, GREEN);*/
                     for (int k = j+1 ; (k<CWD_LEN-1) && (head_str[k] !='\0') && (head_str[k] !='\n') ; k++){
                         printf("%c", head_str[k]);
                     }
