@@ -1,0 +1,2 @@
+PS1='\[\e[2;32m\]$(git_br)\[\e[0m\] ${debian_chroot:+($debian_chroot)}\[\e[34;1m\]\W\[\e[0m\] \[\e[37;1m\]$\[\e[0m\] '
+

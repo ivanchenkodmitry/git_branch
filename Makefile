@@ -1,5 +1,5 @@
 PREFIX=/usr/bin
-OUT=git-br
+OUT=git_br
 default:
 	gcc git_branch.c -o ${OUT} -std=c99
 	
