@@ -22,8 +22,8 @@ int main(int argc, char *argv[])
 	while((dirname_length = strlen(dirname_ptr)) > 1) {
 		strcat(dirname_ptr, "/.git/HEAD");
 		if((head_file = fopen(dirname_ptr, "r")) != NULL) {
-			if (!fread(head_str, sizeof(char), CWD_LEN , head_file))
-				ERROR("HEAD is empty");
+			if (!fgets(head_str, CWD_LEN*sizeof(char), head_file))
+				ERROR("HEAD is empty\n");
 			char *ptr = strrchr(head_str,'/');
 			if (ptr != NULL) {
 				printf("%s",ptr + 1);
